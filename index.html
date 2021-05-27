@@ -21,45 +21,124 @@
 		<p>Alejandro Hidalgo Badillo - B.S. Computer Science and Technology</p>
 		<p>Manuel Camacho Padilla - B.S. Computer Science and Technology</p>
 		<p>Jorge Emiliano Turner Escalante - B.S. Computer Science and Technology</p>
-<!-- 		<div class="phonetic">/ ˈɛərˌpleɪn /</div> -->
 		<div class="scroll-cta" >Scroll</div>
 	</div>
-	
+	<!--
+
+
 	<div class="section right">
 		<h2>Get to know our work...</h2>
 	</div>
+	-->
 	
 	<div class="ground-container">
 		<div class="parallax ground"></div>
 		<div class="section right">
 			<h2>Software: Philosophy and Abstract.</h2>
 			<div class="rightAlign">
-				<p>TecXotic’s team developed and implemented its own software from the principle of the client-server architecture. This model gives rise to data sharing, data processing, and data centralization which makes it safe for data integrity..</p>
+				<p>
+					Innovation requires technological implementation and human ideals, that is why TecXotic’s software philosophy is to develop and use modular subsystems that work independently from others, thus making a scalable and simple to use system.
+					<br>
+					TecXotic’s team developed and implemented its own software from the principle of the client-server architecture. This model gives rise to data sharing, data processing, and data centralization which makes it safe for data integrity.
+					<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
+				</p>
 			</div>
 		</div>
 
-		<div class="section">
+		<div class="section right">
 			<h2>Software: Main technologies </h2>
-			<div class="leftAlign">
+			<div class="rightAlign">
+				<p>
+					There are several technologies implemented for the development of KOLOP. Starting with the operative systems (Windows 10 and Raspberry Pi OS), the main systems that carry the software development. The implementation of code in both OS and the protocols involved are essential for complete interaction with KOLOP 
+					<br>
+				</p>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/unity_logo.png" alt="Unity" width="8%">Unity: The User Interface (UI) for the complete control of KOLOP was developed using this tool. It allows us to create visual indicators, view cameras, and send control instructions.
+					</p>
+				</div>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/csharp_logo.png" alt="C#" width="8%">C#: It is used to create the client-side connection of the client-server architecture implemented to communicate the UI and KOLOP and control the visual indicators in the UI. It allows the connection over TCP to send instructions in JSON format and to receive real-time stream video from the cameras using UDP.
+					</p>
+				</div>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/python_logo.png" alt="Python" width="8%">Python: It is used to create the server-side connection of the client-server architecture implemented to communicate the UI and KOLOP and activate or deactivate preprogrammed instructions for controlling and using Artificial Intelligence (AI).
+					</p>
+				</div>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/mavlink_logo.png" alt="MAVLink" width="8%">MAVLink: Along with the Python programming language, it is used to send manual and autonomous control instructions to the motors of KOLOP.
+					</p>
+				</div>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/opencv_logo.png" alt="OpenCV" width="8%">OpenCV: Along with the Python programming language, it is used to recognize images from the cameras and to achieve an autonomous and intelligent behavior from KOLOP to complete the tasks.
+					</p>
+				</div>
+				<div class="custom_card">
+					<p>
+						<img src="src_img/gstreamer_logo.png" alt="GStreamer" width="8%">GStreamer: It is used to create a real-time stream video over UDP from the cameras as the source. It allows the developed systems to connect and use the streaming video either for viewing or for image processing.
+					</p>
+				</div>
 
-			<p>There are several technologies implemented for the development of KOLOP. Starting with the operative systems (Windows 10 and Raspberry Pi OS), the main systems that carry the software development. The implementation of code in both OS and the protocols involved are essential for complete interaction with KOLOP </p>
+
 			</div>
+
+
+			
 		
+		</div>
+		
+		<div class="section">
+			<h2>Software: Communication flowchart</h2>
+			<div class="leftAlign">
+				<p>
+					There are three main protocols for communicating the subsystems: UDP, TCP, and MAVLink.
+					<br>
+					 1.-  UDP is used for real-time streaming of the camera images;
+					<br>
+					 2.-  TCP, for data streaming and sending instructions from the UI to KOLOP;
+					<br>
+					 3.-  and MAVLink to send messages to the Pixhawk, thus controlling the roll, pitch and yaw for manual and autonomous control, as well as to get data from the sensors in the Pixhawk.
+					<div class="custom_card">
+						<p>
+							<img src="src_img/communication_flowchart.png" alt="communication flowchart" width="140%"> 
+						</p>
+					</div>
+
+				</p>
+			</div>
+
+
+
 		</div>
 		
 		<div class="section right">
-			<h2>Defying all known physical laws.</h2>
-			<p>It's actual magic!</p>
-		</div>
-		
-		<div class="section">
-			<h2>Software: Main technologies </h2>
-			<div class="leftAlign">
-
-			<p>There are several technologies implemented for the development of KOLOP. Starting with the operative systems (Windows 10 and Raspberry Pi OS), the main systems that carry the software development. The implementation of code in both OS and the protocols involved are essential for complete interaction with KOLOP </p>
+			<h2>Software: Manual Control </h2>
+			<div class="rightAlign">
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eaque pariatur at rem dicta. Quaerat doloribus est maiores hic earum asperiores a reiciendis veniam. Saepe atque suscipit provident consequuntur eos?
+				<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
+				
+			</p>
 			</div>
 		
 		</div>
+		<div class="section">
+			<h2>Software: Autonomous Control </h2>
+			<div class="leftAlign">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur distinctio labore cumque, culpa optio excepturi fugiat voluptates recusandae modi voluptatibus provident veniam explicabo praesentium veritatis reprehenderit! Explicabo, suscipit magnam!
+				<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
+			
+			</p>
+			</div>
+		
+		</div>
+
+
 		<div class="parallax bubbles"></div>
 	</div>
 	
@@ -71,24 +150,28 @@
 			<circle id="circle-phalange" cx="60" cy="60" r="15" fill="transparent" stroke-width="0.5"></circle>
 		</svg>
 		<div class="section dark ">
-			<h2>The facts and figures.</h2>
-			<p>Lets get into the nitty gritty...</p>
+			<h2>Materials</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero perspiciatis assumenda aperiam reprehenderit repellendus quos illo placeat similique exercitationem consectetur ratione, ipsa et hic dolore culpa, labore nam odio quisquam.
+			</p>
 		</div>
 		<div class="section dark length">
 			<h2>Length.</h2>
-			<p>Long.</p>
+			<p>40 cm x 40 cm x 50 cm.</p>
 		</div>
 		<div class="section dark wingspan">
-			<h2>Wing Span.</h2>
-			<p>I dunno, longer than a cat probably.</p>
+			<h2>Aereal View</h2>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo amet maxime quae maiores, sint quis similique alias reiciendis facilis natus placeat quo eligendi doloribus, modi hic cum adipisci atque.
+			</p>
 		</div>
 		<div class="section dark phalange">
-			<h2>Left Phalange</h2>
-			<p>Missing</p>
+			<h2>Cilinder</h2>
+			<p>2 of them</p>
 		</div>
 		<div class="section dark">
-			<h2>Engines</h2>
-			<p>Turbine funtime</p>
+			<h2>Thrust: Brushless Motors</h2>
+			<p>8 of them</p>
 		</div>
 <!-- 		<div class="section"></div> -->
 	</div>
@@ -106,7 +189,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js'></script>
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js'></script>
-<script  src="./tecxotic.js"></script>
+	<script  src="./tecxotic.js"></script>  
 
 </body>
 </html>

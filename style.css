@@ -7,7 +7,7 @@ svg {
   --padding: 10vmin;
   /*--color-background: #47acf0; */
     background: rgb(69,167,193);
-    background: linear-gradient(180deg, rgba(69,167,193,1) 0%, #140030 16.3%);
+    background: linear-gradient(180deg, rgba(69,167,193,1) 0%, #140030 9%);
   --font-size-large: 8vw;
   --font-size-medium: 4vw;
   --font-size-normal: 2vw;
@@ -174,7 +174,7 @@ canvas {
 }
 .content .scroll-cta {
   font-size: var(--font-size-medium);
-  opacity: 0;
+  opacity: .5;
 }
 
 .content .trench{
@@ -240,19 +240,20 @@ canvas {
   font-size: var(--font-size-medium);
 }
 .rightAlign{
-    display: flex;
-    width: 50%;
-    margin-left: 50%;
-    text-align: left;
-    
-
-
+    margin-left: 33%;
+    text-align:justify;
 }
 .leftAlign{
-    display: flex;
-    width: 50%;
-    text-align: left;
-    
-
-
+    margin-right: 40%;
+    text-align: justify;
 }
+.custom_card{
+  max-width: 80%;
+  text-align: justify;
+  margin-top: 5%;
+}
+p img{
+  float: left;
+  margin-top: -2%;
+}
+

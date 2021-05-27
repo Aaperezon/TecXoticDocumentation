@@ -295,19 +295,19 @@ function setupAnimation(model)
   tl.to(kolop.position, { x: -10, ease: 'power1.in' }, delay);
 
   delay += sectionDuration;
-
+  // 1 Se mueve a la izquerda
   tl.to(kolop.rotation, { x: tau * .25, y: 0, z: -tau * 0.05, ease: 'power1.inOut' }, delay);
-  tl.to(kolop.position, { x: -40, y: 0, z: -60, ease: 'power1.inOut' }, delay);
+  tl.to(kolop.position, { x: -120, y: 0, z: -60, ease: 'power1.inOut' }, delay);
 
   delay += sectionDuration;
-
+  // 2 Se mueve a la derecha
   tl.to(kolop.rotation, { x: tau * .25, y: 0, z: tau * 0.05, ease: 'power3.inOut' }, delay);
-  tl.to(kolop.position, { x: 40, y: 0, z: -60, ease: 'power2.inOut' }, delay);
+  tl.to(kolop.position, { x: 120, y: 0, z: -60, ease: 'power2.inOut' }, delay);
 
   delay += sectionDuration;
-
+  // 2 Se mueve a la izquierda
   tl.to(kolop.rotation, { x: tau * .2, y: 0, z: -tau * 0.1, ease: 'power3.inOut' }, delay);
-  tl.to(kolop.position, { x: -40, y: 0, z: -30, ease: 'power2.inOut' }, delay);
+  tl.to(kolop.position, { x: -120, y: 0, z: -30, ease: 'power2.inOut' }, delay);
   tl.to(kolop.scale, { x: 3, y: 3, z: 3});
 
   delay += sectionDuration;
