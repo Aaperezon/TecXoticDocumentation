@@ -1,195 +1,333 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="shortcut icon" href="./src_img/Logo.png">
-  <title>TecXotic Documentation</title>
-  <link rel="stylesheet" href="./style.css">
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="content">
-	<div class="loading">Loading</div>
-	<div class="trigger"></div>
-	<div class="section">
-
-		<h1 >TecXotic.</h1>
-		<h3>Technical documentation (Electronics and Programming).</h3>
-		<h4>By: </h4>
-		<p>Aarón Pérez Ontiveros - B.S. Computer Science and Technology</p>
-		<p>Alejandro Hidalgo Badillo - B.S. Computer Science and Technology</p>
-		<p>Manuel Camacho Padilla - B.S. Computer Science and Technology</p>
-		<p>Jorge Emiliano Turner Escalante - B.S. Computer Science and Technology</p>
-		<div class="scroll-cta" >Scroll</div>
-	</div>
-	<!--
-
-
-	<div class="section right">
-		<h2>Get to know our work...</h2>
-	</div>
-	-->
-	
-	<div class="ground-container">
-		<div class="parallax ground"></div>
-		<div class="section right">
-			<h2>Software: Philosophy and Abstract.</h2>
-			<div class="rightAlign">
-				<p>
-					Innovation requires technological implementation and human ideals, that is why TecXotic’s software philosophy is to develop and use modular subsystems that work independently from others, thus making a scalable and simple to use system.
-					<br>
-					TecXotic’s team developed and implemented its own software from the principle of the client-server architecture. This model gives rise to data sharing, data processing, and data centralization which makes it safe for data integrity.
-					<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
-				</p>
-			</div>
-		</div>
-
-		<div class="section right">
-			<h2>Software: Main technologies </h2>
-			<div class="rightAlign">
-				<p>
-					There are several technologies implemented for the development of KOLOP. Starting with the operative systems (Windows 10 and Raspberry Pi OS), the main systems that carry the software development. The implementation of code in both OS and the protocols involved are essential for complete interaction with KOLOP 
-					<br>
-				</p>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/unity_logo.png" alt="Unity" width="8%">Unity: The User Interface (UI) for the complete control of KOLOP was developed using this tool. It allows us to create visual indicators, view cameras, and send control instructions.
-					</p>
-				</div>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/csharp_logo.png" alt="C#" width="8%">C#: It is used to create the client-side connection of the client-server architecture implemented to communicate the UI and KOLOP and control the visual indicators in the UI. It allows the connection over TCP to send instructions in JSON format and to receive real-time stream video from the cameras using UDP.
-					</p>
-				</div>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/python_logo.png" alt="Python" width="8%">Python: It is used to create the server-side connection of the client-server architecture implemented to communicate the UI and KOLOP and activate or deactivate preprogrammed instructions for controlling and using Artificial Intelligence (AI).
-					</p>
-				</div>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/mavlink_logo.png" alt="MAVLink" width="8%">MAVLink: Along with the Python programming language, it is used to send manual and autonomous control instructions to the motors of KOLOP.
-					</p>
-				</div>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/opencv_logo.png" alt="OpenCV" width="8%">OpenCV: Along with the Python programming language, it is used to recognize images from the cameras and to achieve an autonomous and intelligent behavior from KOLOP to complete the tasks.
-					</p>
-				</div>
-				<div class="custom_card">
-					<p>
-						<img src="src_img/gstreamer_logo.png" alt="GStreamer" width="8%">GStreamer: It is used to create a real-time stream video over UDP from the cameras as the source. It allows the developed systems to connect and use the streaming video either for viewing or for image processing.
-					</p>
-				</div>
-
-
-			</div>
-
-
-			
-		
-		</div>
-		
-		<div class="section">
-			<h2>Software: Communication flowchart</h2>
-			<div class="leftAlign">
-				<p>
-					There are three main protocols for communicating the subsystems: UDP, TCP, and MAVLink.
-					<br>
-					 1.-  UDP is used for real-time streaming of the camera images;
-					<br>
-					 2.-  TCP, for data streaming and sending instructions from the UI to KOLOP;
-					<br>
-					 3.-  and MAVLink to send messages to the Pixhawk, thus controlling the roll, pitch and yaw for manual and autonomous control, as well as to get data from the sensors in the Pixhawk.
-					<div class="custom_card">
-						<p>
-							<img src="src_img/communication_flowchart.png" alt="communication flowchart" width="140%"> 
-						</p>
-					</div>
-
-				</p>
-			</div>
-
-
-
-		</div>
-		
-		<div class="section right">
-			<h2>Software: Manual Control </h2>
-			<div class="rightAlign">
+	<canvas class="webgl" style="background-color: white;">	</canvas>
+	<section class="information intro">
+		<h1 style="text-align: center">KOLOP</h1>
+		<h3 style="text-align: center;">presented by TecXotic</h3>
+		<h3 >Team 2021:</h3>
+		<h4 style="padding-left: 2%;">Aarón Pérez Ontiveros</h4>
+		<h4 style="padding-left: 2%;">Ximena Ávila V</h4>
+		<h4 style="padding-left: 2%;">Alejandro Hidalgo B. </h4>
+		<h4 style="padding-left: 2%;">Ana Bonavides A.</h4>
+		<h4 style="padding-left: 2%;">Bernardo Salgado D.</h4>
+		<h4 style="padding-left: 2%;">Brian I . Chavéz V. </h4>
+		<h4 style="padding-left: 2%;">Camila Rojas Alemán.</h4>
+		<h4 style="padding-left: 2%;">Daniel Hidalgo B.</h4>
+		<h4 style="padding-left: 2%;">Daniel Moreno T</h4>
+		<h4 style="padding-left: 2%;">Héctor A. Sanvicente S.</h4>
+		<h4 style="padding-left: 2%;">Hilda Rojas A. </h4>
+		<h4 style="padding-left: 2%;">Ian Doring R.</h4>
+		<h4 style="padding-left: 2%;">Jael A. López G. </h4>
+		<h4 style="padding-left: 2%;">Jorge A. Vega M.</h4>
+		<h4 style="padding-left: 2%;">Jorge E. Turner Esc.</h4>
+		<h4 style="padding-left: 2%;">José J. Fragoso F.</h4>
+		<h4 style="padding-left: 2%;">Laura A. Santos F.</h4>
+		<h4 style="padding-left: 2%;">Luis Gómez T. </h4>
+		<h4 style="padding-left: 2%;">Manuel Camacho P.</h4>
+		<h4 style="padding-left: 2%;">Mariana De la Rosa B. </h4>
+		<h4 style="padding-left: 2%;">Megan S. Martínez A. </h4>
+		<h4 style="padding-left: 2%;">Merle S. Flores G.</h4>
+		<h4 style="padding-left: 2%;">Ricardo Rodríguez F. </h4>
+		<h4 style="padding-left: 2%;">Rosibel Nava M.</h4>
+		<h4 style="padding-left: 2%;">Sebastián Cruz Espinosa M. </h4>
+		<h4 style="padding-left: 2%;">Valeria Valencia A. </h4>
+	</section>
+	<br>
+	<section class="information">
+		<h1 style="text-align: center">Abstract</h1>
+		<div class="left-align">
+			<h4 style="text-align: center">♦</h4>
 			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore eaque pariatur at rem dicta. Quaerat doloribus est maiores hic earum asperiores a reiciendis veniam. Saepe atque suscipit provident consequuntur eos?
-				<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
+				Kolop is an underwater Remotely Operated
+				Vehicle (ROV) designed to perform tasks
+				without damaging the ecosystem and
+				contributing to the decrease of plastic
+				pollution in oceans, the assessment of coral
+				reef health, and the maintenance of healthy
+				waterways, among others. It has been
+				specifically designed to work inside BOONE
+				dam rivers and lakes, meeting the
+				requirements presented this year by the
+				Marine Advanced Technology Education
+				(MATE).
+			</p>
+		</div>
+		
+		<div class="right-align">
+			<h5>Innovation and special features:</h5>
+			<p>
+				Software:
+					Propietary UI and telemetry;
+					Electronics;
+					Digital and analogic camera system;
+					Modular power system;
+					LED status indicator system.
+			</p>
+			<p>
+				Design:
+					Slim tensor relief;
+					Frame wheels;
+					Soft adaptive gripper;
+					Gripper switch;
+					Easy conversion from 8 to 6 thrusters;
+					Three levels for tool placement;
+					Geometry and patterns inspired by
+					Mexican folklore.
+			</p>
+			<p>
+				Safety:
+					Safety stickers;
+					SOPs;
+					New safety protocols and communication
+					system;
+					Logistics;
+					A new and integral organizational
+					structure;
+					An improved methodology for design and
+					testing phases.
+			</p>
+		</div>
+		
+	</section>
+	<section class="information blueprint">
+		<h1 style="text-align: center">Design</h1>
+		<div class="left-align">
+			<h4>Simple Modular Well-done SMW</h4>
+			<h3 style="text-align: center">♦</h3>
+			<p>
+				SIMPLE: Designs must be as simple as
+				possible. This reduces weight, manufacturing
+				complexity, and failure. A design with fewer
+				parts has a lower probability of errors and
+				defects.
+			</p>
+		</div>
+		<div class="right-align">
+			<h3 style="text-align: center">♦</h3>
+			<p>
+				MODULAR: A modular design provides the
+				capability to make repairs, adjustments, and
+				updates to designs. Modularity requires the
+				standardization of pieces, components, and
+				assemblies. A modular design allows to
+				strategically manufacture spare parts for the
+				competition
+
+			</p>
+		</div>
+		<div class="left-align">
+			<h3 style="text-align: center">♦</h3>
+			<p>
+				WELL-DONE: It involves a focus on the quality
+				of designs, drawings, specifications 
+				(documentation), and manufacturing processes. 
+			</p>
+		</div>
+		<div class="right-align">
+			<h3 style="text-align: center">♥</h3>
+			<p>
+				TecXotic’s Kolop aesthetic is inspired by the
+				cultural legacy of our country, we designed
+				some components based on geometric
+				patterns and shapes of the Mexican folklore
+				such as ancient pyramids and Mayan
+				hieroglyphs.
+			</p>
+		</div>
+		<div class="left-align">
+			<h3 style="text-align: center">♦</h3>
+			<h4 style="text-align: center">Interchangeable Gripper System</h4>
+			<p>
+				TecXotic’s Kolop aesthetic is inspired by the
+				cultural legacy of our country, we designed
+				some components based on geometric
+				patterns and shapes of the Mexican folklore
+				such as ancient pyramids and Mayan
+				hieroglyphs.
+			</p>
+		</div>
+		<div class="right-align">
+			<h3 style="text-align: center">♦</h3>
+			<h4 style="text-align: center">Grippers</h4>
+			<p>
+				♣ Kolop is equipped with a pneumatic parallel
+				gripper (Fig. 23) reused from previous designs
+				to perform tasks that require high force level
+				for example task 1.1 Seabin (Reconnecting a
+				new power connector to the recently installed
+				Seabin).
+				<br>
+				♣ The need of manipulating objects with diverse
+				and complex geometries has been one of the
+				main challenges in previous designs. Our
+				solution is that Kolop is now equipped with a
+				soft triple gripper (Fig. 22). With this
+				configuration; vertical and horizontal objects
+				can be caught thanks to the symmetry and
+				angle of separation of the gripper's fingers,
+				making it perfect for catching a wide variety
+				of objects and doing the task of cleaning
+				plastic debris or collecting fragile objects like
+				coral fragments easier.
+			</p>
+		</div>
+	</section>
+	<section class="information">
+		<h1 style="text-align: center">Electronics</h1>
+		<div class="left-align">
+			<h3 style="text-align: center">♦</h3>
+			<h5 style="text-align: center">Ground Control Unit (GCU)</h5>
+			<p>
+				The GCU is responsible for sending and
+				receiving data from Kolop, displaying the
+				cameras’ stream, and TecXotic’s new interface
+				with all sensor data (main computer and input
+				joysticks). It also controls the pneumatic
+				grippers aboard (gripper manager made out of
+				pneumatic valves and controls) and an
+				emergency stop button that interrupts the
+				power supply down the tether immediately,
+				ensuring the operators and Kolop’s safety.
+			</p>
+		</div>
+		<div class="right-align">
+			<h3 style="text-align: center">♦</h3>
+			<h5 style="text-align: center">Main Control Enclosure (MCE)</h5>
+			<p>
+				The MCE receives 16V from the GCU. Inside
+				the MCE, a Step-Down (DROK DR-US180076)
+				reduces the voltage from 16 to 12, the same
+				voltage in which the LED modules and the
+				analog camera system work. A micro Step-
+				Down 12V to 5V supplies the RPi 4. The RPi4
+				manages communication with the GCU, the
+				Pixhawk, and the digital camera system,
+				including the servo motor responsible for the
+				camera tilt system (Fig. 15, MCE).
+				14
+				Technical documentation | 2021
+				In this edition, interactive LED modules were
+				included as a safety feature. They allow the
+				operators to make a quick assessment of
+				Kolop’s status:
+				Red: Kolop is not connected to the GCU.
+				Orange: The Pixhawk is not connected to
+				the RPi4 and the server communication.
+				Green: Kolop is armed and ready to
+				operate.
+			</p>
+		</div>
+
+	</section>
+	<section class="information">
+		<h1 style="text-align: center">Software</h1>
+		
+		<div class="left-align">
+			<h3 style="text-align: center">♦</h3>
+			<h5 style="text-align: center">User Interface: Art-Promt (Ar-P)</h5>
+			<p>
+				Kolop’s user interface is named Art-Prompt
+				(Ar-P) two words that describe important
+				features of the system:
+				<br>
+				♠ Art: Ar-P is an interface easy to read, and it
+				follows minimalism as the style of art
+				implemented in the development of visuals.
+				<br>
+				♠ Prompt: refers to any system’s readiness to
+				perform a command. Since Ar-P is
+				responsible for linking communication and
+				sending instructions.
+			</p>
+		</div>
+		<div class="right-align">
+			<h3 style="text-align: center">♦</h3>
+			<h5 style="text-align: center">KOLOP's Code</h5>
+			<p>
+				The server is developed using Python as the
+				main programming tool and runs on Ubuntu
+				as the operative system in the RPi4. The
+				server manages access to Ar-P receiving and
+				sending data in JSON format. Once the server
+				starts receiving data, it sends instructions to
+				each electronic component such as sensors
+				and controllers. For controlling the thrusters,
+				the MAVLink protocol is used to communicate
+				with the Pixhawk
+			</p>
+		</div>
+		<div class="left-align">
+			<h3 style="text-align: center">♦</h3>
+			<h5 style="text-align: center">Communication Flowchart</h5>
+			<p>
+				SINGLE IMAGE
+			</p>
+		</div>
+
+	</section>
+	<section class="information">
+		<h2 style="text-align: center">About This Page</h2>
+		
+		<div class="left-align">
+			<h3 style="text-align: center">♣</h3>
+			<h5 style="text-align: center">Aarón Pérez Ontiveros</h5>
+			<p>	
+				I 
+				This page was developed with 
+				these libraries and framework: Threejs and Bootstrap
 				
 			</p>
-			</div>
-		
 		</div>
-		<div class="section">
-			<h2>Software: Autonomous Control </h2>
-			<div class="leftAlign">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur distinctio labore cumque, culpa optio excepturi fugiat voluptates recusandae modi voluptatibus provident veniam explicabo praesentium veritatis reprehenderit! Explicabo, suscipit magnam!
-				<img src="src_img/ArP_logo.png" alt="ArP leader of programming" width="90%">
-			
-			</p>
-			</div>
-		
-		</div>
+	</section>
 
 
-		<div class="parallax bubbles"></div>
-	</div>
+
+
+	<script src="tecxotic.js" type="module"></script>
 	
-	
-	<div class="blueprint">
-		<svg width="100%" height="100%" viewbox="0 0 100 100">
-			<line id="line-length" x1="10" y1="80" x2="90" y2="80" stroke-width="0.5"></line>
-			<path id="line-wingspan" d="M10 50, L40 35, M60 35 L90 50" stroke-width="0.5"></path>
-			<circle id="circle-phalange" cx="60" cy="60" r="15" fill="transparent" stroke-width="0.5"></circle>
-		</svg>
-		<div class="section dark ">
-			<h2>Materials</h2>
-			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero perspiciatis assumenda aperiam reprehenderit repellendus quos illo placeat similique exercitationem consectetur ratione, ipsa et hic dolore culpa, labore nam odio quisquam.
-			</p>
-		</div>
-		<div class="section dark length">
-			<h2>Length.</h2>
-			<p>40 cm x 40 cm x 50 cm.</p>
-		</div>
-		<div class="section dark wingspan">
-			<h2>Aereal View</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illo amet maxime quae maiores, sint quis similique alias reiciendis facilis natus placeat quo eligendi doloribus, modi hic cum adipisci atque.
-			</p>
-		</div>
-		<div class="section dark phalange">
-			<h2>Cilinder</h2>
-			<p>2 of them</p>
-		</div>
-		<div class="section dark">
-			<h2>Thrust: Brushless Motors</h2>
-			<p>8 of them</p>
-		</div>
-<!-- 		<div class="section"></div> -->
-	</div>
-	<div class="trench">
-		<div class="section"></div>
-		<div class="section end">
-			<h2>Las impresoras trabajan más...</h2>
-			
-		</div>
-	</div>
-</div>
-<!-- partial -->
-<script src='https://unpkg.com/three@0.117.1/build/three.min.js'></script>
-<script src='https://unpkg.com/three@0.117.1/examples/js/loaders/OBJLoader.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js'></script>
-<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js'></script>
-	<script  src="./tecxotic.js"></script>  
-
 </body>
+<footer  style="width:100%; text-align:center;"  >
+
+
+	<div class="copyright">
+		<div class="container-fluid" style="background-color: #000000; color: #ffffff;">
+			Aarón Pérez Ontiveros 2021 & TecXotic 2021 ©  Copyright: 
+	
+		</div>
+	</div>
+</footer>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
